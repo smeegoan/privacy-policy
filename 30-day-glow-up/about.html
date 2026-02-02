@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="30 Days Glow Up - Transform yourself through 30 days of positive habits. Build daily goals and track your progress.">
+    <meta name="keywords" content="30 days challenge, self improvement, daily goals, habits, productivity">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta property="og:title" content="30 Days Glow Up">
+    <meta property="og:description" content="Transform yourself through 30 days of positive habits">
+    <meta property="og:image" content="icon.png">
+    <title>30 Days Glow Up - Transform Yourself in 30 Days</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .logo {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+        
+        .logo-img {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            display: block;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .description {
+            text-align: center;
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            padding: 25px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .cta-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3em;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
+            color: #666;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="icon.png" alt="30 Days Glow Up" class="logo-img">
+            <span class="badge">Now Available on Google Play</span>
+            <h1>30 Days Glow Up</h1>
+            <p class="subtitle">Transform Yourself Through 30 Days of Positive Habits</p>
+        </header>
+        
+        <div class="description">
+            <p>Embark on a transformative journey with one meaningful daily goal for 30 days. 
+            Build lasting habits, track your progress, and become the best version of yourself.</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">30</div>
+                <div class="stat-label">Daily Goals</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Offline</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Ads-Free*</div>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">📅</div>
+                <h3>Daily Goal Display</h3>
+                <p>One inspiring goal per day with beautiful imagery to keep you motivated throughout your journey.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">✅</div>
+                <h3>Goal Completion</h3>
+                <p>Mark goals as complete with satisfying animations and celebrate your achievements.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Progress Tracking</h3>
+                <p>View completed goals and monitor your overall progress throughout the 30-day challenge.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <h3>Goal Browser</h3>
+                <p>Browse all 30 goals with status indicators to see what's ahead and plan your journey.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">💾</div>
+                <h3>100% Offline</h3>
+                <p>All data stored locally on your device. Works perfectly without internet connection.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Beautiful Design</h3>
+                <p>Clean, modern interface with smooth animations and inspiring visuals.</p>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Ready to Transform Your Life?</h2>
+            <p>Start your 30-day journey today and build habits that last a lifetime.</p>
+            <a href="https://play.google.com/store/apps/details?id=pmcc.glowup" class="cta-button">
+                📱 Download on Google Play
+            </a>
+        </div>
+        
+        <footer>
+            <p>&copy; 2026 30 Days Glow Up. All rights reserved.</p>
+            <p style="margin-top: 15px;">
+                <a href="index.html">Privacy Policy</a> | 
+                <a href="mailto:smeegoan@gmail.com">Contact Support</a> |
+                <a href="../">All Apps</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #999;">
+                *Non-intrusive banner ads may appear to support development
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile apps by Pedro Cardoso - Privacy policies and information">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+    <title>Apps by Pedro Cardoso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .app-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+        }
+        
+        .app-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .app-icon-img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .app-card h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .app-card p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .app-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .app-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .app-link:hover {
+            background: #5568d3;
+        }
+        
+        .app-link.secondary {
+            background: #e9ecef;
+            color: #667eea;
+        }
+        
+        .app-link.secondary:hover {
+            background: #dee2e6;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e9ecef;
+            color: #666;
+        }
+        
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Mobile Apps</h1>
+            <p class="subtitle">by Pedro Cardoso</p>
+        </header>
+        
+        <div class="apps-grid">
+            <div class="app-card">
+                <img src="30-day-glow-up/icon.png" alt="30 Days Glow Up Icon" class="app-icon-img">
+                <h2>30 Days Glow Up <span class="badge">LIVE</span></h2>
+                <p>Transform yourself through 30 days of positive habits. Build lasting habits, track your progress, and become the best version of yourself.</p>
+                <div class="app-links">
+                    <a href="https://play.google.com/store/apps/details?id=pmcc.glowup" class="app-link" target="_blank">📱 Google Play</a>
+                    <a href="30-day-glow-up/" class="app-link secondary">Privacy Policy</a>
+                    <a href="30-day-glow-up/about.html" class="app-link secondary">About</a>
+                </div>
+            </div>
+            
+            <!-- Add more apps here in the future -->
+            <!-- Example:
+            <div class="app-card">
+                <span class="app-icon">🎯</span>
+                <h2>Another App</h2>
+                <p>Description of your next app...</p>
+                <div class="app-links">
+                    <a href="#" class="app-link">Google Play</a>
+                    <a href="another-app/" class="app-link secondary">Privacy Policy</a>
+                </div>
+            </div>
+            -->
+        </div>
+        
+        <footer>
+            <p>&copy; 2026 Pedro Cardoso. All rights reserved.</p>
+            <p style="margin-top: 15px;">
+                <a href="mailto:smeegoan@gmail.com">Contact</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
